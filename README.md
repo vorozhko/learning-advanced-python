@@ -1,10 +1,14 @@
 # Advanced python examples
 
+In this project I will test my skills in different advanced programming areas using Python.
+By the end of this excercise the project will contain Python examples in different programming areas.
+The fun part that resulting code might look sometimes simple and at the same time solving advanced problem.
+
 ## Topics
 
 **Metaprogramming**:
-* Write a Python decorator that logs the execution time of a function. [done](./metaprogramming/log-exec-time.py) ✔️
-* Create a metaclass that enforces a Singleton pattern for classes. [done](./metaprogramming/singleton.py) ✔️
+* Write a Python decorator that logs the execution time of a function. [Example](./metaprogramming/log-exec-time.py) ✔️
+* Create a metaclass that enforces a Singleton pattern for classes. [Example](./metaprogramming/singleton.py) ✔️
 
 **Concurrency and Parallelism**:
 * Implement a multi-threaded web scraper using the threading module.
