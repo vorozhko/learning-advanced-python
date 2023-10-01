@@ -3,8 +3,8 @@
 ## Topics
 
 **Metaprogramming**:
-* Write a Python decorator that logs the execution time of a function.
-* Create a metaclass that enforces a Singleton pattern for classes.
+* Write a Python decorator that logs the execution time of a function. [done](./metaprogramming/log-exec-time.py) ✔️
+* Create a metaclass that enforces a Singleton pattern for classes. [done](./metaprogramming/singleton.py) ✔️
 
 **Concurrency and Parallelism**:
 * Implement a multi-threaded web scraper using the threading module.
