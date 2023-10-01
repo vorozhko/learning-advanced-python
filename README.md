@@ -1,2 +1,5 @@
-# learning-advanced-python
-Advanced python examples
+# Advanced python examples
+
+Topics:
+* Design Patterns
+* Decorators
