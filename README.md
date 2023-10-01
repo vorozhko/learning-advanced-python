@@ -1,7 +1,9 @@
 # Advanced python examples
 
 In this project I will test my skills in different advanced programming areas using Python.
+
 By the end of this excercise the project will contain Python examples in different programming areas.
+
 The fun part that resulting code might look sometimes simple and at the same time solving advanced problem.
 
 ## Topics
