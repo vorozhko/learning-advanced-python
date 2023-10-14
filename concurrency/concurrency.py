@@ -1,13 +1,22 @@
 import logging
-import threading
-import time
 import concurrent.futures
+import urllib.request
+import tempfile
+import shutil
 
+links = [
+        "http://python.org/",
+        "https://www.python.org/about/",
+        "https://www.python.org/community/"
+    ]
 
-def thread_function(name):
-    logging.info("Thread %s: starting", name)
-    time.sleep(2)
-    logging.info("Thread %s: finishing", name)
+def thread_function(link):
+    logging.info("Thread %s: starting", link)
+    with urllib.request.urlopen(link) as response:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".html") as tmp_file:
+            shutil.copyfileobj(response, tmp_file)
+            logging.info("Tmp file name is %s", tmp_file.name)
+    logging.info("Thread %s: finishing", link)
 
 
 if __name__ == "__main__":
@@ -15,19 +24,7 @@ if __name__ == "__main__":
     logging.basicConfig(format=format, level=logging.INFO,
                         datefmt="%H:%M:%S")
 
+
     # Managing threads with ThreadPoolExecutor
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
-        executor.map(thread_function, range(3))
-
-    # Making and managing threads with threading module
-    threads = list()
-    for index in range(3):
-        logging.info("Main    : create and start thread %d.", index)
-        x = threading.Thread(target=thread_function, args=(index,))
-        threads.append(x)
-        x.start()
-
-    for index, thread in enumerate(threads):
-        logging.info("Main    : before joining thread %d.", index)
-        thread.join()
-        logging.info("Main    : thread %d done", index)
+        executor.map(thread_function, links)
