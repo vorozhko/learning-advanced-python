@@ -13,7 +13,7 @@
 * Create a metaclass that enforces a Singleton pattern for classes. [Example](./metaprogramming/singleton.py) ✔️
 
 **Concurrency and Parallelism**:
-* Implement a multi-threaded web scraper using the threading module.
+* Implement a multi-threaded web scraper using the threading module. [Example](./concurrency/concurrency.py) ✔️
 * Use the multiprocessing module to parallelize a CPU-bound task.
 
 **Functional Programming:**
